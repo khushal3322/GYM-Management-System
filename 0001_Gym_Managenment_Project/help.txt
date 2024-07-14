@@ -1,0 +1,96 @@
+int fetch_id = Integer.parseInt(fetch_str);
+
+
+int id = (int)request.getAttribute("id");
+
+
+<%!
+MemberController mc=new MemberController();
+
+%>
+
+<% Member member=mc.Featch_member(fetch_id); %>
+		<table>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Membership Expired</th>
+			</tr>
+			<tr>
+				<td><%member.getId(); %></td>
+				<td><%member.getName(); %></td>
+				<td><%member.getExpired(); %></td>
+			</tr>
+			
+			<!-- Add more members as needed -->
+		</table>
+
+		
+		
+		
+<% 
+Member member=mc.Featch_member(no); %>
+
+
+
+
+	<%!MemberController mc = new MemberController();%>
+
+		<%
+		 
+		int id = 1;
+		Member member = mc.Featch_member(id);
+		%>
+		
+
+
+
+
+		<%!
+		one_Featch one_featch =new one_Featch();
+		
+%>
+
+<% 
+Member member=mc.Featch_member(one_featch); %>
+		<table>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Membership Expired</th>
+			</tr>
+			<tr>
+				<td><%member.getId(); %></td>
+				<td><%member.getName(); %></td>
+				<td><%member.getExpired(); %></td>
+			</tr>
+			 <tr>
+            <td>2</td>
+            <td>Jane Smith</td>
+            <td>Active</td>
+        </tr>
+			
+			<!-- Add more members as needed -->
+		</table>
+
+		
+		
+		
+		
+		
+		
+			<table>
+			<tr> 
+				<th>Id</th>
+				<th>Name</th>
+				<th>Membership Expired</th>
+			</tr>
+			<tr>
+				<td><%=member.getId()%></td>
+				<td><%=member.getName()%></td>
+				<td><%=member.getExpired()%></td>
+			</tr>
+
+
+			<!-- Add more members as needed -->
+		</table>
